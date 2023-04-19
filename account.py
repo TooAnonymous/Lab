@@ -11,13 +11,11 @@ class Account:
             return False
 
     def withdraw(self, amount: float) -> bool:
-        if amount < self.__account_balance and amount != 0:
-            self.__account_balance -= amount
-            return True
-        elif amount == 0:
+        if amount <= 0 or amount > self.__account_balance:
             return False
         else:
-            return False
+            self.__account_balance -= amount
+            return True
 
     def get_balance(self) -> float:
         return self.__account_balance
