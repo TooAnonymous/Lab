@@ -38,4 +38,3 @@ class Test:
         assert self.p1.get_balance() == pytest.approx(8, abs=0.001)
         assert self.p1.withdraw(5.5) is True
         assert self.p1.get_balance() == pytest.approx(2.5, abs=0.001)
-
